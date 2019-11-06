@@ -11,7 +11,7 @@ Idena docker image.
 
 ## Quickstart
 
-Just start the Idena Node docker image with:
+Start the Idena Node docker image with:
 ```sh
 docker-compose up
 ```
@@ -23,10 +23,3 @@ Then download and run the Idena Client, it should connect to the previously star
 ```sh
 make build VERSION=0.13.4
 ```
-
-## Running
-
-```sh
-docker-compose up
-```
-
