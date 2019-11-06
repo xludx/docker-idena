@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  idena:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - CONTAINER_TIMEZONE="Europe/Helsinki"
+    image: ludx/idena:latest
+    command: idena --datadir "/root/.idena" --verbosity 4 --rpcaddr idena
+    volumes:
+      - ./data/idena:/root/.idena
+    ports:
+      - 40403:40403
+      - 40404:40404
+      - 9009:9009
+
