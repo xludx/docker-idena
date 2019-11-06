@@ -10,10 +10,10 @@ ENV PATH=/opt/particl-${PARTICL_VERSION}/bin:$PATH
 # TODO: cleanup
 RUN apt-get update -y \
     && apt-get upgrade -y \
-    && apt-get install -y apt-transport-https ca-certificates wget curl gnupg2 autogen git net-tools iputils-ping \
-    build-essential libtool autotools-dev automake autoconf pkg-config libssl-dev libboost-all-dev ntp ntpdate \
-    libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
-    libqrencode-dev autoconf openssl libevent-dev libminiupnpc-dev bsdmainutils libsodium-dev \
+    && apt-get install -y apt-transport-https ca-certificates wget curl gnupg2 autogen git net-tools iputils-ping ntp ntpdate \
+#    build-essential libtool autotools-dev automake autoconf pkg-config libssl-dev libboost-all-dev  \
+#    libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
+#    libqrencode-dev autoconf openssl libevent-dev libminiupnpc-dev bsdmainutils libsodium-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

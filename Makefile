@@ -3,9 +3,10 @@ build:
 	time docker build --no-cache --build-arg VERSION=$(VERSION) --build-arg CONTAINER_TIMEZONE=Europe/Helsinki -t ludx/idena:$(VERSION) -t docker.io/ludx/idena:$(VERSION) -t docker.io/ludx/idena:latest .
 
 run:
-	docker run --name idena -p 40403:40403 -p 40404:40404 -p 9009:9009 |
-	 -v /Users/juha/Work/other/idena/data:/root/.idena |
-	 docker.io/ludx/idena:latest
+	docker run -d --name idena -p 40403:40403 -p 40404:40404 -p 9009:9009 -v $(CURDIR)/data/idena:/root/.idena --restart unless-stopped --hostname idena docker.io/ludx/idena:latest idena --datadir "/root/.idena" --verbosity 3 --rpcaddr idena
+
+pull:
+	docker pull docker.io/ludx/idena:latest
 
 start:
 	docker start idena
