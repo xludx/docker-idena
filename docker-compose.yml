@@ -8,7 +8,7 @@ services:
       args:
         - CONTAINER_TIMEZONE="Europe/Helsinki"
     image: ludx/idena:latest
-    command: idena --datadir "/root/.idena" --verbosity 4 --rpcaddr idena
+    command: idena --datadir "/root/.idena" --verbosity 3 --rpcaddr idena
     volumes:
       - ./data/idena:/root/.idena
     ports:
