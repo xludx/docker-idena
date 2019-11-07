@@ -18,8 +18,7 @@ docker-compose up
 
 Then download and run the Idena Client, it should connect to the previously started Idena Node.
 
-Datadir will be located at ./data/idena.
-
+Datadir will be located at ./data/idena, remember to make a backup of the keystore/nodekey.
 
 ## Usage
 
@@ -33,3 +32,9 @@ make pull                   - pull the latest image from docker.io
 make logs                   - tails the logs (default level INFO)
 ```
 
+
+## Attach bash into running container
+
+```sh
+docker exec -it idena bash -l
+```

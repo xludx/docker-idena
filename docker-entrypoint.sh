@@ -3,7 +3,7 @@
 set -e
 
 if [[ "$1" = "idena" ]]; then
-      set -- "$@" --datadir "/root/.idena --verbosity 3 --rpcaddr idena"
+      set -- "$@" --datadir "/root/.idena" --verbosity 3 --rpcaddr idena
       exec "$@"
 fi
 
