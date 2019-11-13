@@ -2,3 +2,5 @@ idena-desktop
 .idea
 data/idena
 data/bak
+.DS_Store
+
